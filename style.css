@@ -1,0 +1,130 @@
+:root{
+    --Moderate-violet: hsl(263, 55%, 52%);
+    --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    --Light-gray: hsl(0, 0%, 81%);
+    --Light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body{
+    position:relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Light-grayish-blue);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 13px;
+}
+.container{
+    height:fit-content;
+    width:fit-content;
+    display: grid;
+    grid-template: 284px 264px/ 258px 258px 258px 258px;
+    gap: 24px 28px;
+}
+
+.person{
+    border-radius: 8px;
+    padding: 24px 36px;
+}
+
+.person-1{
+    grid-area: 1/1/2/3;
+    background-color: var(--Moderate-violet);
+    background-image: url("images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position: 350px 0;
+}
+.person-2{
+    background-color: var(--Very-dark-grayish-blue);
+}
+.person-3{
+    background-color: var(--White);
+    box-shadow: 5px 5px 20px var(--Light-gray);
+    
+}
+
+.person-4{
+    background-color: var(--Very-dark-blackish-blue);
+    grid-column: 2/4;
+}
+.person-5{
+    grid-area: 1/4/3/5;
+    background-color: var(--White);
+    box-shadow: 5px 5px 20px var(--Light-gray);
+}
+
+.person-infor{
+    display: flex;
+    align-items: center;
+}
+
+.image{
+    border-radius: 50%;
+    width: 32px;
+    height:32px
+}
+.image1{
+    border: 2px solid hsl(0, 0%, 100%, 0.5);
+}
+.image4{
+    border: 2px solid var(--Moderate-violet);
+}
+.person-infor-box{
+    padding-left: 16px;
+}
+
+.person-1,
+.person-2,
+.person-4{
+    color:var(--White);
+    font-weight: 500;
+}
+
+.person-3,
+.person-5{
+    color:var(--Very-dark-blackish-blue);
+    font-weight: 500;
+}
+
+.person-verified{
+    opacity: 0.5;
+    font-weight: 500;
+    font-size: 11px;
+}
+
+.main-speech{
+    font-size: 20px;
+    font-weight: 600;
+    padding: 16px 0 20px 0;
+}
+
+.sub-speech{
+    opacity: 0.7;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+@media(max-width: 600px){
+    body{
+        display: block;
+        padding: 60px 24px;
+    }
+
+    .container{
+        display: block;
+    }
+
+    .person{
+        margin-bottom: 24px;
+        padding-bottom: 40px;
+    }
+}
